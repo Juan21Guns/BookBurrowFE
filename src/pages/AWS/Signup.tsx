@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import UserPool from "./UserPool"
 import { CognitoUserAttribute } from "amazon-cognito-identity-js"
 

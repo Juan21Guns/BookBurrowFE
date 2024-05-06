@@ -1,8 +1,8 @@
 import { CognitoUserPool } from "amazon-cognito-identity-js"
-import { defineConfig, loadEnv } from 'vite'
+// import { defineConfig, loadEnv } from 'vite'
 
 const poolData = {
-    UserPoolId: err,
+    UserPoolId: 'us-east-1_OpSTDWDUC',
     ClientId: import.meta.env.VITE_ClientId
 }
 
