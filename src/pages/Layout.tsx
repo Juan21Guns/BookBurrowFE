@@ -11,11 +11,11 @@ function Startup () {
                     <div className={classes.title}>
                         <h3><em>The </em>Book Burrow</h3>
                     </div>    
-                    <form>
-                        <input list="searchBar" placeholder="Books" />
-                        <input type="text" />
-                        <input type="button" />
-                    </form>
+                    <div className={classes.form}>
+                        <input list="searchBar" placeholder="Books" id={classes.select} />
+                        <input type="text" id={classes.textBox} />
+                        <input type="button" id={classes.button} />
+                    </div>
                     <div className={classes.profile}><a href="login"><img src={profile} alt="login"/></a></div>
                     <ul className={classes.menu}>
                         <li><a href="/home">Home</a></li>

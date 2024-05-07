@@ -1,12 +1,22 @@
+* { /* all element selector, references https://stackoverflow.com/questions/67215777/css-grid-with-input-fields-alignment-question */
+    box-sizing: border-box; /* border, within the width of the element */
+  }
+  input {
+    display: block;
+    width: 100%
+  }   
+
 .container {
     color: red;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
     color: black;
     text-decoration: none;
     display: grid;
-    grid-template-columns: 2fr 2fr 3fr 1fr 2fr;
+    grid-template-columns: 2fr 2fr 4fr 1fr 2fr;
     background-color: aqua;
     align-items: center;
 }
@@ -29,11 +39,32 @@
     color: rgb(163, 155, 76);
 }
 
-.wrapper form {
+/* SEARCHBOX */
+.form {
     grid-column: 3;
     background-color: green;
+    display: grid;
+    grid-template-columns: 2fr 7fr 1fr;
+    justify-items: stretch;
+    height: 4vh;
 }
 
+#select {
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#textBox {
+    grid-column: 2;
+}
+
+#button {
+    grid-column: 3;
+    align-content: right;
+} 
+
+/* LOGIN ICON */
 .profile {
     grid-column: 4;
     display: flex;
