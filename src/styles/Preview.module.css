@@ -1,0 +1,70 @@
+.wrapper {
+    color: white;
+}
+
+.wrapper h1 {
+    font-size: 7em;
+    padding-left: 1em;
+    padding: 1.5em 0 0.5em 2em;
+    margin: 0;
+}
+
+.wrapper h4 {
+    margin: 0;
+    padding: 0 0 0 4em;
+    height: 2em;
+    width: 15em;
+    font-size: 4em;
+}
+
+.rac {
+    height: 50em;
+    width: 50em;
+    /* background-color: white; */
+    overflow: hidden;
+    position: absolute;
+    top: 12em;
+    right: 10em;
+
+}
+
+.rac img {
+    height: 110%;
+}
+
+.g1 {
+    position: absolute;
+
+    background-color: black;
+    background-image: url('../assets/background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: screen;
+    filter: blur(30px);
+    top: -1em;
+    left: -20em;
+    height: 120%;
+    width: 200vw;
+    z-index: -3;
+}
+
+.g2 {
+    position: absolute; 
+    top: 40em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 20em solid rgb(227, 243, 237);
+    border-left: 100vw solid transparent;
+    z-index: -1;
+}
+
+.g3 {
+    position: absolute;
+    top: 60em;
+    left: 0;
+    height: 30em;
+    width: 100vw;
+    background-color: rgb(227, 243, 237);
+    z-index: -1;
+}

@@ -10,7 +10,7 @@ function Startup () {
             <nav className={classes.container}>
                 <div className={classes.wrapper}>
                     <div className={classes.title}>
-                        <h3><em>The </em> Book Burrow</h3>
+                        <a href="/"><h1><em>The </em> Book Burrow</h1></a>
                     </div>    
                     <form className={classes.form}>
                         <select id={classes.select}>

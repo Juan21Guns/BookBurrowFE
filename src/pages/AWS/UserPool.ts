@@ -6,5 +6,4 @@ const poolData = {
     ClientId: import.meta.env.VITE_ClientId
 }
 
-console.log(import.meta.env.VITE_UserId)
 export default new CognitoUserPool(poolData);
