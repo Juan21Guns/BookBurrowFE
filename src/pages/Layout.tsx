@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import classes from '../styles/Layout.module.css';
 import profile from '../assets/profile.svg';
+import search from '../assets/magnifier-svgrepo-com.svg';
 
 function Startup () {
 
@@ -9,13 +10,18 @@ function Startup () {
             <nav className={classes.container}>
                 <div className={classes.wrapper}>
                     <div className={classes.title}>
-                        <h3><em>The </em>Book Burrow</h3>
+                        <h3><em>The </em> Book Burrow</h3>
                     </div>    
-                    <div className={classes.form}>
-                        <input list="searchBar" placeholder="Books" id={classes.select} />
-                        <input type="text" id={classes.textBox} />
-                        <input type="button" id={classes.button} />
-                    </div>
+                    <form className={classes.form}>
+                        <select id={classes.select}>
+                            <option value="Books">Books</option>
+                            <option value="Author">Author</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Groups">Groups</option>
+                        </select>
+                        <input type="text" id={classes.textBox} placeholder="Search Books, Authors, Friends, or Group Chats"/>
+                        <input type="image" src={search} id={classes.button} alt="Submit" />
+                    </form>
                     <div className={classes.profile}><a href="login"><img src={profile} alt="login"/></a></div>
                     <ul className={classes.menu}>
                         <li><a href="/home">Home</a></li>
@@ -27,13 +33,6 @@ function Startup () {
                 </div>
             </nav>
             <Outlet />
-
-            <datalist id="searchBar">
-                    <option value="Books"></option>
-                    <option value="Author"></option>
-                    <option value="Friends"></option>
-                    <option value="Groups"></option>
-            </datalist>
 
         </>
     )
