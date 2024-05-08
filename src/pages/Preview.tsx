@@ -6,8 +6,8 @@ import classes from '../styles/Preview.module.css';
 function Preview () {
     return (
         <div className={classes.wrapper}>
-            <h1><em>The</em> Book Burrow</h1>
-            <h4>Your leading site in book clubbyness.</h4>
+            <h1>The <em>Book</em> Burrow</h1>
+            <h4>Your <b>leading</b> site in book clubbiness.</h4>
             <div className={classes.rac}>
                 <img src={happyRaccoon} />
             </div>

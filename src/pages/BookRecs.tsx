@@ -1,10 +1,11 @@
 const axios = require('axios').default
 
 function BookRecs () {
-    console.log(`${import.meta.env.VITE_SERVER}/booksApi?title=jujutsu`);
+  //book searches 
+    console.log(import.meta.env.VITE_SERVER + '/booksApi?title=jujutsu');
     axios.get(`${import.meta.env.VITE_SERVER}/booksApi?title=jujutsu`)
     .then((response: any) => {
-      console.log(response);
+      console.log(response.data.items);
     })
     .catch((err: Error) => {
       console.log(err);
