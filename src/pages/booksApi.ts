@@ -1,15 +1,16 @@
 const axios = require('axios').default;
 
-function searchBooks (param: string) {
-    axios.get(`${import.meta.env.VITE_SERVER}/booksApi?${param}`)
+async function searchBooks (param: string) {
+    const data = await axios.get(`${import.meta.env.VITE_SERVER}/booksApi?${param}`)
     .then((response: any) => {
-      console.log(response.data.items);
+      return response.data;
     })
     .catch((err: Error) => {
       console.log(err);
     })
     .finally()
 
+    return data;
 }
 
 export default searchBooks;

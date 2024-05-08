@@ -3,12 +3,13 @@ import classes from '../styles/Layout.module.css';
 import profile from '../assets/profile.svg';
 import search from '../assets/magnifier-svgrepo-com.svg';
 import React from 'react';
-import searchBooks from "./booksApi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
     const [text, setText] = React.useState('');
+
+    const navigate = useNavigate();
 
     const handleTextChange = (e: any) => {
         setText(e.target.value);
@@ -23,10 +24,10 @@ function Startup () {
         if (text) {
             switch (bSelect) {
                 case "Books":
-                    searchBooks(`title=${text}`);
+                    navigate('/bookresults', { state: { type: "books", title: text } });
                     break;
                 case "Author":
-                    searchBooks(`title=inauthor=${text}`);
+                    // searchBooks(`title=inauthor=${text}`);
                     break;
                 case "Groups":
                     break;
