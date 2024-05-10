@@ -11,7 +11,7 @@ async function searchBooks (param: string) {
     })
     .finally()
 
-    if (data.totalItems === 0) {
+    if (data == null) {
       return null;
     }
     return data;

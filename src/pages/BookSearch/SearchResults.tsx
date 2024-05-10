@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"; 
-import { IRootState } from "../redux/IRootState";
+import { IRootState } from "../../redux/IRootState";
 import React, { useEffect } from "react";
-import { removeTodo } from "../redux/objectSlice";
+import { removeTodo } from "../../redux/objectSlice";
+import sad from '../../assets/ImageNotFound.svg'
+import Books from "./Books";
 
 function SearchResults () {
     const todos = useSelector((state: IRootState) => state.book.todos);
@@ -10,24 +12,22 @@ function SearchResults () {
     const [items, setItems] = React.useState(todos);
 
     useEffect(() => {
-        if (todos[0] == -1) {
-            setItems([]);
-        } else {
-            setItems(todos);
-        }
+        setItems(todos);
     }, [todos])
 
     return (
        <>
-            {/* <button onClick={handleRemove}>Remove item</button> */}
             <p>Total Items: {items[0] === undefined ? 0 : items[0].totalItems}</p>
             {
                 items.map((item: any) => {
                     return (
-                        <div>
-                            {item.items.map((book: any) => {
+                        <div key={item.id}>
+                            {item.items == null ? <p>No results, please check your spelling and try again</p> : item.items.map((book: any) => {
+                                const volume = book.volumeInfo;
                                 return (
-                                    <img src={book.volumeInfo.imageLinks.thumbnail} key={item.id}></img>
+                                    <>
+                                        <Books volume={volume} selfLink={book.selfLink} key={book.id} />
+                                    </>
                                 )
                             })} 
                         </div>
