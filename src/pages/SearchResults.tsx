@@ -5,25 +5,35 @@ import { removeTodo } from "../redux/objectSlice";
 
 function SearchResults () {
     const todos = useSelector((state: IRootState) => state.book.todos);
-    const dispatch = useDispatch();
     console.log(todos);
 
     const [items, setItems] = React.useState(todos);
 
     useEffect(() => {
-        setItems(todos);
+        if (todos[0] == -1) {
+            setItems([]);
+        } else {
+            setItems(todos);
+        }
     }, [todos])
 
-    // const handleRemove = (itemNum) => {
-    //     dispatch(removeTodo(items[itemNum]));
-    // }
-
     return (
-        <>
+       <>
             {/* <button onClick={handleRemove}>Remove item</button> */}
-            {items.map((item: any) => {
-                return <img src={item.items[0].volumeInfo.imageLinks.thumbnail} key={item.id}></img>
-            })}
+            <p>Total Items: {items[0] === undefined ? 0 : items[0].totalItems}</p>
+            {
+                items.map((item: any) => {
+                    return (
+                        <div>
+                            {item.items.map((book: any) => {
+                                return (
+                                    <img src={book.volumeInfo.imageLinks.thumbnail} key={item.id}></img>
+                                )
+                            })} 
+                        </div>
+                    )
+                })
+            }
         </>
     )
 }

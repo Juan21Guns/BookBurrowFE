@@ -10,22 +10,22 @@ interface Book {
     "id": string,
     "selfLink": string,
     "volumeInfo": {
-        "title": string,
+        "title": string | null,
         "subtitle": string | null,
-        "authors": string[],
-        "publisher": string,
-        "publishedDate": string,
+        "authors": string[] | null,
+        "publisher": string | null,
+        "publishedDate": string | null,
         "description": string | null,
-        "industryIdentifiers": IndustryIdentifier[],
-        "pageCount": number,
+        "industryIdentifiers": IndustryIdentifier[] | null,
+        "pageCount": number | null,
         "imageLinks": {
         "smallThumbnail"?: string | null,
         "thumbnail": string | null,
         "large": string | null,
         "extraLarge": string | null,
         },
-        "previewLink": string,
-    }
+        "previewLink": string | null,
+    } | null,
 }
 
 interface jsonBook {
@@ -45,18 +45,32 @@ const objectSlice = createSlice ({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-            const todo = {
-                id: state.todos.length,
-                totalItems: action.payload.totalItems,
-                items: action.payload.items,
-            }
+            if (action != null) {
+                const todo = {
+                    id: state.todos.length,
+                    totalItems: action.payload.totalItems,
+                    items: action.payload.items,
+                }
 
-            state.todos.push(todo);
+                state.todos.push(todo);
+            } else {
+                const todo = {
+                    id: 1,
+                    totalItems: 0,
+                    items: [
+                        {
+                            "id": "1",
+                            "selfLink": "imageNull",
+                            "volumeInfo": null
+                        }
+                    ]
+                }
+            
+                state.todos.push(todo);
+            }
         },
-        removeTodo: (state, action) => {
-            state.todos = state.todos.filter((todo) => {
-                return todo.id !== action.payload.id
-            });
+        removeTodo: (state) => {
+            state.todos = [];
         }
     },
 })

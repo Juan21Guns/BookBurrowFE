@@ -3,11 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { Preview, Layout, Home, NotFound, BookRecs, SearchResults } from './pages'
 import { Signup } from './pages/AWS'
 import './styles/global.css'
+import { Provider } from "react-redux"
+import store from "./redux/store"
 
 function App() {
 
   return (
-    <>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -20,7 +22,7 @@ function App() {
           <Route path="*"element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   )
 }
 
