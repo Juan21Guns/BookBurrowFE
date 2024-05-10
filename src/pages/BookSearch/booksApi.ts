@@ -7,9 +7,13 @@ async function searchBooks (param: string) {
     })
     .catch((err: Error) => {
       console.log(err);
+      return null;
     })
     .finally()
 
+    if (data.totalItems === 0) {
+      return null;
+    }
     return data;
 }
 

@@ -4,9 +4,9 @@ import profile from '../assets/profile.svg';
 import search from '../assets/magnifier-svgrepo-com.svg';
 import React from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux"; 
+import { removeTodo, addTodo } from "../redux/objectSlice";
 import searchBooks from "./BookSearch/booksApi";
-import { addTodo } from "../redux/objectSlice";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
@@ -14,11 +14,19 @@ function Startup () {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    
+    function RemoveBooks() {
+        dispatch(removeTodo());
+    }
 
     function UpdateBooks (input: string) {
         searchBooks(`title=${input}`)
             .then(e => {
-                dispatch(addTodo(e));
+                if (e === null) {
+                    dispatch(addTodo(null));
+                } else {
+                    dispatch(addTodo(e));
+                }
             });
     }
 
@@ -35,10 +43,9 @@ function Startup () {
         if (text) {
             switch (bSelect) {
                 case "Books":
-                    // RemoveBooks();
+                    RemoveBooks();
                     UpdateBooks(text);
                     navigate('/bookresults');
-                    // console.log(items);
                     break;
                 case "Author":
                     // searchBooks(`title=inauthor=${text}`);
