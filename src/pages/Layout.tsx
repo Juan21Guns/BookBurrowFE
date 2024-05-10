@@ -4,12 +4,23 @@ import profile from '../assets/profile.svg';
 import search from '../assets/magnifier-svgrepo-com.svg';
 import React from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import searchBooks from "./BookSearch/booksApi";
+import { addTodo } from "../redux/objectSlice";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
     const [text, setText] = React.useState('');
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    function UpdateBooks (input: string) {
+        searchBooks(`title=${input}`)
+            .then(e => {
+                dispatch(addTodo(e));
+            });
+    }
 
     const handleTextChange = (e: any) => {
         setText(e.target.value);
@@ -24,7 +35,10 @@ function Startup () {
         if (text) {
             switch (bSelect) {
                 case "Books":
-                    navigate('/bookresults', { state: { type: "books", title: text } });
+                    // RemoveBooks();
+                    UpdateBooks(text);
+                    navigate('/bookresults');
+                    // console.log(items);
                     break;
                 case "Author":
                     // searchBooks(`title=inauthor=${text}`);
@@ -37,7 +51,6 @@ function Startup () {
                     break;
             }
         }
-        console.log(bSelect, text);
     }
 
     return (
