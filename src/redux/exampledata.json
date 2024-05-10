@@ -1,0 +1,328 @@
+{
+    "todos": [{
+    "id": 1, 
+    "totalItems": 1135,
+    "items": [
+      {
+        "id": "xw2_DwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xw2_DwAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 1",
+          "subtitle": "Ryomen Sukuna",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2019-12-03",
+          "description": "Although Yuji Itadori looks like your average teenager, his immense physical strength is something to behold! Every sports club wants him to join, but Itadori would rather hang out with the school outcasts in the Occult Research Club. One day, the club manages to get their hands on a sealed cursed object. Little do they know the terror they’ll unleash when they break the seal... -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974715688"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "197471568X"
+            }
+          ],
+          "pageCount": 193,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xw2_DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xw2_DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=xw2_DwAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=1&source=gbs_api"
+        }
+      },
+      {
+        "id": "nYNiygEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/nYNiygEACAAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 4",
+          "subtitle": null,
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2020-06-02",
+          "description": "To gain the power he needs to save his friend from a cursed spirit, Yuji Itadori swallows a piece of a demon, only to find himself caught in the midst of a horrific war of the supernatural! In a world where cursed spirits feed on unsuspecting humans, fragments of the legendary and feared demon Ryomen Sukuna have been lost and scattered about. Should any demon consume Sukuna’s body parts, the power they gain could destroy the world as we know it. Fortunately, there exists a mysterious school of jujutsu sorcerers who exist to protect the precarious existence of the living from the supernatural! While investigating a strange set of mysterious deaths, Itadori meets Junpei, a troubled kid who is often bullied at school. However, Junpei is also befriended by the culprit behind the bloody incident—Mahito, a mischievous cursed spirit! Mahito sets in motion a devious plan involving Junpei, hoping to ensnare Itadori as well.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "1974714802"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974714803"
+            }
+          ],
+          "pageCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=nYNiygEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=nYNiygEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=nYNiygEACAAJ&dq=jujutsu+kaisen&hl=&cd=2&source=gbs_api"
+        }
+      },
+      {
+        "id": "fJcJEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/fJcJEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 7",
+          "subtitle": "The Origin Of Obedience",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2020-12-01",
+          "description": "Despite the injuries and losses they suffered in an attack on the Goodwill Event, the students of Jujutsu High have little time rest as people start dying under mysterious circumstances. Could these strange deaths have anything to do with Sukuna's lost fingers? -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974724277"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974724271"
+            }
+          ],
+          "pageCount": 193,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=fJcJEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=fJcJEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=fJcJEAAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=3&source=gbs_api"
+        }
+      },
+      {
+        "id": "b93lDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/b93lDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 4",
+          "subtitle": "I'm Gonna Kill You!",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2020-06-02",
+          "description": "While investigating a strange set of mysterious deaths, Itadori meets Junpei, a troubled kid who is often bullied at school. However, Junpei is also befriended by the culprit behind the bloody incident—Mahito, a mischievous cursed spirit! Mahito sets in motion a devious plan involving Junpei, hoping to ensnare Itadori as well. -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974720255"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "197472025X"
+            }
+          ],
+          "pageCount": 201,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=b93lDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=b93lDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=b93lDwAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=4&source=gbs_api"
+        }
+      },
+      {
+        "id": "OCOVEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/OCOVEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 20",
+          "subtitle": "Sendai Colony--The Height Of The Feast--",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2023-08-15",
+          "description": "Fushiguro and Reggie have nearly crushed each other to death. Reggie makes a move to break the stalemate and bring their battle to its climax! Meanwhile, Okkotsu disrupts the four-way standoff between jujutsu fighters in the Sendai colony, leading to a fierce battle involving reincarnated sorcerers and a special grade cursed spirit! -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974740277"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974740277"
+            }
+          ],
+          "pageCount": 193,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=OCOVEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=OCOVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=OCOVEAAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=5&source=gbs_api"
+        }
+      },
+      {
+        "id": "ZV6sEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ZV6sEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen: The Official Anime Guide: Season 1",
+          "subtitle": null,
+          "authors": [
+            "Gege Akutami, Jujutsu Kaisen Production Committee"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2023-10-10",
+          "description": "Enter the world of jujutsu sorcerers and cursed spirits with Jujutsu Kaisen: The Official Anime Guide: Season 1. Based on the hugely popular manga series by Gege Akutami, this guide to the Jujutsu Kaisen anime will provide readers with everything they wanted to know about the making of the action-packed series. Discover all the behind-the-scenes details as the anime production team discusses the painstaking work that went into translating the pages of the best-selling manga to animation. Featuring concept art, original storyboards, character design sketches, exclusive interviews, and commentary from the voice actors, this book also includes two double-sided posters and is the ultimate look into the creation of the first season of Jujutsu Kaisen! -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974741762"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974741761"
+            }
+          ],
+          "pageCount": 170,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=ZV6sEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=ZV6sEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=ZV6sEAAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=6&source=gbs_api"
+        }
+      },
+      {
+        "id": "MZPLDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/MZPLDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 2",
+          "subtitle": "Fearsome Womb",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2020-02-04",
+          "description": "When a cursed womb appears at a detention facility, Jujutsu High dispatches Itadori and the other first-years to handle the situation. However, the curse they encounter is far stronger than they ever expected! Itadori and friends now have two options: run and maybe live, or fight and die. While they are distracted, powerful curses with mysterious designs on Jujutsu High and Satoru Gojo are gathering... -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974718276"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974718271"
+            }
+          ],
+          "pageCount": 193,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=MZPLDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=MZPLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=MZPLDwAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=7&source=gbs_api"
+        }
+      },
+      {
+        "id": "B1KYzQEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/B1KYzQEACAAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen, Vol. 9",
+          "subtitle": null,
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2021-04-06",
+          "description": "Yuji Itadori is resolved to save the world from cursed demons, but he soon learns that the best way to do it is to slowly lose his humanity and become one himself! In a world where cursed spirits feed on unsuspecting humans, fragments of the legendary and feared demon Ryomen Sukuna were lost and scattered about. Should any demon consume Sukuna’s body parts, the power they gain could destroy the world as we know it. Fortunately, there exists a mysterious school of Jujutsu Sorcerers who exist to protect the precarious existence of the living from the supernatural! Satoru Gojo and Suguru Geto are assigned a mission to escort the Star Plasma Vessel to Master Tengen. However, they’re ambushed by Toji Fushiguro, a mercenary known as the Sorcerer Killer. Can Gojo and Geto survive this surprise attack? And will this be the turning point where Gojo becomes the strongest exorcist while Geto embraces ruin and rebellion?",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "1974718727"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974718726"
+            }
+          ],
+          "pageCount": 192,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=B1KYzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=B1KYzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=B1KYzQEACAAJ&dq=jujutsu+kaisen&hl=&cd=8&source=gbs_api"
+        }
+      },
+      {
+        "id": "IqHFEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/IqHFEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen: The Official Character Guide",
+          "subtitle": null,
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2024-04-23",
+          "description": "Yuji Itadori is the unwilling host of Ryomen Sakuna, a terrible evil spirit. Yuji joins the Jujutsu Sorcerers in order to rid himself of the corruption, and soon discovers a dangerous supernatural world hidden just out of sight. Jujutsu Kaisen: The Official Character Guide collects the details of Yuji’s spirit-hunting quest, profiles for all the major characters, the secret origin story of Jujutsu Kaisen creator Gege Akutami, and an exclusive interview between Akutami and Tite Kubo, creator of the global Shonen Jump phenomenon Bleach! -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974745401"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974745406"
+            }
+          ],
+          "pageCount": 234,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=IqHFEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=IqHFEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=IqHFEAAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=9&source=gbs_api"
+        }
+      },
+      {
+        "id": "u5UQEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/u5UQEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jujutsu Kaisen 0",
+          "subtitle": "Blinding Darkness",
+          "authors": [
+            "Gege Akutami"
+          ],
+          "publisher": "VIZ Media LLC",
+          "publishedDate": "2021-01-05",
+          "description": "Yuta Okkotsu is a nervous high school student who is suffering from a serious problem—his childhood friend Rika has turned into a Curse and won't leave him alone. Since Rika is no ordinary Curse, his plight is noticed by Satoru Gojo, a teacher at Jujutsu High, a school where fledgling exorcists learn how to combat Curses. Gojo convinces Yuta to enroll, but can he learn enough in time to confront the Curse that haunts him? -- VIZ Media",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781974720156"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1974720152"
+            }
+          ],
+          "pageCount": 201,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=u5UQEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=u5UQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+            "large": null,
+            "extraLarge": null
+          },
+          "previewLink": "http://books.google.com/books?id=u5UQEAAAQBAJ&printsec=frontcover&dq=jujutsu+kaisen&hl=&cd=10&source=gbs_api"
+        }
+      }
+    ]
+}]
+}

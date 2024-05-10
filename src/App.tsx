@@ -1,9 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Preview, Layout, Home } from './pages'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+
+import { Preview, Layout, Home, NotFound, BookRecs, SearchResults } from './pages'
 import { Signup } from './pages/AWS'
 import './styles/global.css'
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -12,8 +14,10 @@ function App() {
             <Route index element={<Preview />} />
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Signup />} />
-            
+            <Route path="bookrecs" element={<BookRecs />} />
+            <Route path="/bookresults" element={<SearchResults />} />
           </Route>
+          <Route path="*"element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>

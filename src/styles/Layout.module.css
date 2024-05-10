@@ -17,9 +17,9 @@
     text-decoration: none;
     display: grid;
     grid-template-columns: 2fr 2fr 3fr 1fr 2fr;
-    background-color: rgb(240, 250, 250);
+    background-color: rgb(227, 243, 237);
     align-items: center;
-    padding: 0.5em 0 0 0;
+    padding: 2em 0 0.5em 0;
 }
 
 /* The Book Burrow TITLE */
@@ -33,7 +33,11 @@
     justify-content: center;
 }
 
-.title h3 {
+.title a {
+    text-decoration: none;
+}
+
+.title h1 {
     height: 1.3em;
     width: 8.2em;
     margin: auto;
@@ -50,7 +54,7 @@
     font-style: italic;
     font-weight: 400;
     font-size: 1em;
-    padding-right: 0.2em;
+    padding-right: 0.em;
     color: rgb(163, 155, 76);
 }
 

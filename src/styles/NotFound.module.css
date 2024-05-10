@@ -1,0 +1,64 @@
+.wrapper {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#for404 {
+    top: calc(6.4em - (4vh + 4vw + 2em));
+    font-size: calc(4vh + 4vw + 1em);
+    left: calc(52% - (4vh + 4vw + 2em));
+}
+
+#back404 {
+    font-size: calc(16vh + 16vw + 1em);
+    top: calc(0.8em - (4vh + 4vw + 2em));
+    left: calc(50% - (4vh + 4vw + 0.7em));
+    z-index: -1;
+}
+
+.wrapper h4 {
+    position: absolute;
+    font-weight: 800;
+    color: white;
+}
+
+.wrapper button {
+    position: absolute;
+    top: calc(2em - (2vh + 2vw));
+    left: calc(20% - (2vh + 2vw + 4em));
+    font-family: "PT Serif", serif;
+    font-weight: 200;
+    font-size: calc(2vh + 2vw);
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.bg {
+    position: absolute;
+    top: -50em;
+    width: 120em;
+    filter: blur(9px);
+}
+
+.fg {
+    display: block;
+    width: calc(20vh + 20vw + 1em);
+    padding: 10vh 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
