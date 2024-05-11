@@ -7,7 +7,6 @@ import Books from "./Books";
 
 function SearchResults () {
     const todos = useSelector((state: IRootState) => state.book.todos);
-    console.log(todos);
 
     const [items, setItems] = React.useState(todos);
 
@@ -22,14 +21,16 @@ function SearchResults () {
                 items.map((item: any) => {
                     return (
                         <div key={item.id}>
-                            {item.items == null ? <p>No results, please check your spelling and try again</p> : item.items.map((book: any) => {
-                                const volume = book.volumeInfo;
-                                return (
-                                    <>
-                                        <Books volume={volume} selfLink={book.selfLink} key={book.id} />
-                                    </>
-                                )
-                            })} 
+                            {item.items == null ? <p>No results, please check your spelling and try again</p> : 
+                                item.items.map((book: any) => {
+                                    const volume = book.volumeInfo;
+                                    return (
+                                        <>
+                                            <Books volume={volume} selfLink={book.selfLink} />
+                                        </>
+                                    )
+                                })
+                            } 
                         </div>
                     )
                 })
