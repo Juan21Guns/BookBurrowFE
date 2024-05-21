@@ -20,7 +20,7 @@ function Startup () {
     }
 
     function UpdateBooks (input: string) {
-        searchBooks(`title=${input}`)
+        searchBooks(input)
             .then(e => {
                 if (e === null) {
                     dispatch(addTodo(null));
@@ -40,15 +40,22 @@ function Startup () {
 
     let handleChange = (e: any) => {
         e.preventDefault();
+        let params = "";
         if (text) {
             switch (bSelect) {
                 case "Books":
+                    params = `title=${text}`
                     RemoveBooks();
-                    UpdateBooks(text);
+                    UpdateBooks(params);
                     navigate('/bookresults');
                     break;
                 case "Author":
-                    // searchBooks(`title=inauthor=${text}`);
+                    params = `author=`
+                    params += text;
+                    console.log(params);
+                    RemoveBooks();
+                    UpdateBooks(params);
+                    navigate('/bookresults');
                     break;
                 case "Groups":
                     break;
