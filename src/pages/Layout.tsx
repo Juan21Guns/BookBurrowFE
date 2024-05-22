@@ -84,7 +84,7 @@ function Startup () {
                         <input type="text" id={classes.textBox} placeholder="Search Books, Authors, Friends, or Group Chats" value={text} onChange={handleTextChange} />
                         <input type="image" src={search} id={classes.button} alt="Submit" />
                     </form>
-                    <div className={classes.profile}><NavLink to="login"><img src={profile} alt="login"/></NavLink></div>
+                    <div className={classes.profile}><NavLink to="signup"><img src={profile} alt="login"/></NavLink></div>
                     <ul className={classes.menu}>
                         <li><NavLink to="/home">Home</NavLink></li>
                         <li><NavLink to="/chat">About</NavLink></li>
