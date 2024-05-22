@@ -20,7 +20,7 @@ function Startup () {
     }
 
     function UpdateBooks (input: string) {
-        searchBooks(`title=${input}`)
+        searchBooks(input)
             .then(e => {
                 if (e === null) {
                     dispatch(addTodo(null));
@@ -40,15 +40,22 @@ function Startup () {
 
     let handleChange = (e: any) => {
         e.preventDefault();
+        let params = "";
         if (text) {
             switch (bSelect) {
                 case "Books":
+                    params = `title=${text}`
                     RemoveBooks();
-                    UpdateBooks(text);
+                    UpdateBooks(params);
                     navigate('/bookresults');
                     break;
                 case "Author":
-                    // searchBooks(`title=inauthor=${text}`);
+                    params = `author=`
+                    params += text;
+                    console.log(params);
+                    RemoveBooks();
+                    UpdateBooks(params);
+                    navigate('/bookresults');
                     break;
                 case "Groups":
                     break;
@@ -77,7 +84,7 @@ function Startup () {
                         <input type="text" id={classes.textBox} placeholder="Search Books, Authors, Friends, or Group Chats" value={text} onChange={handleTextChange} />
                         <input type="image" src={search} id={classes.button} alt="Submit" />
                     </form>
-                    <div className={classes.profile}><NavLink to="login"><img src={profile} alt="login"/></NavLink></div>
+                    <div className={classes.profile}><NavLink to="signup"><img src={profile} alt="login"/></NavLink></div>
                     <ul className={classes.menu}>
                         <li><NavLink to="/home">Home</NavLink></li>
                         <li><NavLink to="/chat">About</NavLink></li>

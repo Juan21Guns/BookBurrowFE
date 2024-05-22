@@ -48,8 +48,8 @@ const objectSlice = createSlice ({
             if (action != null) {
                 const todo = {
                     id: state.todos.length,
-                    totalItems: action.payload.totalItems,
-                    items: action.payload.items,
+                    totalItems: action.payload?.totalItems,
+                    items: action.payload?.items,
                 }
 
                 state.todos.push(todo);
