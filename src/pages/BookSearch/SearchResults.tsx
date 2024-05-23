@@ -1,8 +1,6 @@
-import { useDispatch, useSelector } from "react-redux"; 
+import { useSelector } from "react-redux"; 
 import { IRootState } from "../../redux/IRootState";
 import React, { useEffect } from "react";
-import { removeTodo } from "../../redux/objectSlice";
-import sad from '../../assets/ImageNotFound.svg'
 import Books from "./Books";
 
 function SearchResults () {

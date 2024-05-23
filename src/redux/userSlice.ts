@@ -3,6 +3,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit'
 const initialState = {
     userId: "",
     username: "guest",
+    confirmed: false,
 };
 
 const userSlice = createSlice ({
@@ -12,11 +13,13 @@ const userSlice = createSlice ({
         addUser: (state, action) => {
             state.userId = action.payload.userId;
             state.username = action.payload.username;
+            state.confirmed = action.payload.confirmed;
         },
         removeUser: (state) => {
             state =  {
                 userId: "",
                 username: "guest",
+                confirmed: false,
             };
         }
     },

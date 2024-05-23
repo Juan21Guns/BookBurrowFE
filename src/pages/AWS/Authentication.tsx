@@ -36,6 +36,7 @@ function Authentication () {
                 dispatch(addUser({
                     userId: userId,
                     username: form.elements.fullName.value,
+                    confirmed: isSignUpComplete,
                 }));
             } catch (error) {
                 console.log(error);
