@@ -46,7 +46,7 @@ const userSlice = createSlice ({
             state =  {
                 userId: "",
                 username: "guest",
-                confirmed: false,
+                confirmed: "false",
                 sub: "",
                 exp: "",
             };
