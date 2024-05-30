@@ -2,35 +2,33 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Preview, Layout, Home, NotFound, BookRecs } from './pages'
 import SearchResults from './pages/BookSearch/SearchResults.tsx'
 import './styles/global.css'
-import { Provider, useDispatch, useSelector } from "react-redux"
-import store from "./redux/store"
-import Authentication from "./pages/AWS/Authentication.tsx"
+import { useSelector } from "react-redux"
+import SignUp from "./pages/AWS/SignUp.tsx"
 import '@aws-amplify/ui-react/styles.css';
 import Confirm from "./pages/AWS/Confirm.tsx"
 import { IRootState } from "./redux/IRootState.ts"
 import { useEffect } from "react"
 import React from "react"
+import Authentication from "./pages/AWS/Authentication.tsx"
 
 function App() {
 
   const userInfo = useSelector((state: IRootState) => state.user);
 
   const [user, setUser] = React.useState(userInfo.username);
-  const [comp, setComp] = React.useState(<Authentication />);
+  const [comp, setComp] = React.useState(<SignUp />);
   
   useEffect(() => {
-    console.log(userInfo.username == 'guest');
-    setUser(userInfo.username);
-    loggedIn();
-  }, [userInfo])
+    const date = new Date();
+    const unixDate = Math.floor(date.getTime()) / 1000;
 
-  const loggedIn = () => {
-    if (userInfo.username == 'guest') {
-      setComp(<Preview />);
-    } else {
+    setUser(userInfo.username);
+    if (userInfo.confirmed == "true" && userInfo.exp - unixDate > 0) {
       setComp(<Layout />);
+    } else {
+      setComp(<Preview />);
     }
-  }
+  }, [userInfo])
 
   return (
         <BrowserRouter>

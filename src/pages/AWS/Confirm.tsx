@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
-import { confirmSignUp } from "aws-amplify/auth";
-import { useSelector } from "react-redux";
+import { confirmSignUp, fetchAuthSession } from "aws-amplify/auth";
+import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../redux/IRootState";
 import { redirect, useNavigate } from "react-router-dom";
+import { addUser } from "../../redux/userSlice";
 
 function Confirm () {
     const userInfo = useSelector((state: IRootState) => state.user);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [code, setCode] = React.useState("");
     const [user, setUser] = React.useState(userInfo.username);
@@ -20,10 +22,28 @@ function Confirm () {
 
     async function handleSubmit(e: any) {
         e.preventDefault();
-        await confirmSignUp({
-            username: userInfo.userId,
-            confirmationCode: code,
-        });
+        try {
+            await confirmSignUp({
+                username: userInfo.userId,
+                confirmationCode: code,
+            });
+            
+            try {
+                dispatch(addUser({
+                    userId: userInfo.userId,
+                    username: userInfo.username,
+                    confirmed: true,
+                    sub: "",
+                    exp: "",
+                }));
+            } catch (error) {
+                console.log(error);
+            }
+
+            navigate('/signup');
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
