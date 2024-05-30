@@ -19,11 +19,14 @@ function App() {
   const [comp, setComp] = React.useState(<SignUp />);
   
   useEffect(() => {
+    const date = new Date();
+    const unixDate = Math.floor(date.getTime()) / 1000;
+
     setUser(userInfo.username);
-    if (userInfo.username == 'guest') {
-      setComp(<Preview />);
-    } else if (userInfo.confirmed == true) {
+    if (userInfo.confirmed == "true" && userInfo.exp - unixDate > 0) {
       setComp(<Layout />);
+    } else {
+      setComp(<Preview />);
     }
   }, [userInfo])
 

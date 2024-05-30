@@ -37,6 +37,8 @@ function SignUp () {
                     userId: userId,
                     username: form.elements.fullName.value,
                     confirmed: isSignUpComplete,
+                    sub: "",
+                    exp: "",
                 }));
             } catch (error) {
                 console.log(error);

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { confirmSignUp } from "aws-amplify/auth";
+import { confirmSignUp, fetchAuthSession } from "aws-amplify/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../redux/IRootState";
 import { redirect, useNavigate } from "react-router-dom";
@@ -33,12 +33,14 @@ function Confirm () {
                     userId: userInfo.userId,
                     username: userInfo.username,
                     confirmed: true,
+                    sub: "",
+                    exp: "",
                 }));
             } catch (error) {
                 console.log(error);
             }
 
-            navigate('/home');
+            navigate('/signup');
         } catch (error) {
             console.log(error);
         }
