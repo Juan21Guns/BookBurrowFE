@@ -10,6 +10,7 @@ import { IRootState } from "./redux/IRootState.ts"
 import { useEffect } from "react"
 import React from "react"
 import Authentication from "./pages/AWS/Authentication.tsx"
+import FriendResults from "./pages/FriendSearch/FriendResults.tsx"
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
               <Route path="home" element={<Home />} />
               <Route path="bookrecs" element={<BookRecs />} />
               <Route path="bookresults" element={<SearchResults />} />
+              <Route path="friendresults" element={<FriendResults />} />
             </Route>
             <Route path="/signup" element={<Authentication />} />
             <Route path="/confirm" element={<Confirm />} />
