@@ -7,6 +7,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux"; 
 import { removeTodo, addTodo } from "../redux/objectSlice";
 import searchBooks from "./BookSearch/booksApi";
+import friendSearchApi from "./FriendSearch/friendSearchApi";
+import { addFriends, removeFriends } from "../redux/friendSlice";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
@@ -52,7 +54,6 @@ function Startup () {
                 case "Author":
                     params = `author=`
                     params += text;
-                    console.log(params);
                     RemoveBooks();
                     UpdateBooks(params);
                     navigate('/bookresults');
@@ -60,6 +61,29 @@ function Startup () {
                 case "Groups":
                     break;
                 case "Friends":
+                    let listName = text.split(" ");
+                    const firstName = listName[0];
+                    listName.shift();
+
+                    if (listName[0] == undefined) {
+                        params = `firstName=${firstName}`;
+                    } else {
+                        params = `firstName=${firstName}&lastName=${listName.join("%20")}`
+                    }
+
+                    try {
+                        friendSearchApi(params)
+                            .then(e => {
+                                if (e !== null) {
+                                    dispatch(removeFriends());
+                                    dispatch(addFriends(e));
+                                }
+                            });
+                    } catch (error) {
+                        console.log(error);
+                    }
+
+                    navigate('/friendresults');
                     break;
                 default:
                     break;

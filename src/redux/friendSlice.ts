@@ -1,0 +1,27 @@
+import { createSlice } from '@reduxjs/toolkit'
+
+interface friend {
+    userId: number,
+    firstName: string,
+    lastName: string,
+}
+
+const initialState: any = {friends: []};
+
+const friendSlice = createSlice ({
+    name: 'user',
+    initialState,
+    reducers: {
+        addFriends: (state, action) => {
+            action.payload.forEach((friend: friend) => {
+               state.friends.push(friend); 
+            });
+        },
+        removeFriends: (state) => {
+            state.friends = [];
+        }
+    },
+})
+
+export const { addFriends, removeFriends } = friendSlice.actions;
+export default friendSlice.reducer;
