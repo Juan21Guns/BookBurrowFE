@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { removeTodo, addTodo } from "../redux/objectSlice";
 import searchBooks from "./BookSearch/booksApi";
 import friendSearchApi from "./FriendSearch/friendSearchApi";
+import { addFriends, removeFriends } from "../redux/friendSlice";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
@@ -70,9 +71,18 @@ function Startup () {
                         params = `firstName=${firstName}&lastName=${listName.join("%20")}`
                     }
 
-                    console.log(params);
-                    
-                    friendSearchApi(params);
+                    try {
+                        friendSearchApi(params)
+                            .then(e => {
+                                if (e !== null) {
+                                    dispatch(removeFriends());
+                                    dispatch(addFriends(e));
+                                }
+                            });
+                    } catch (error) {
+                        console.log(error);
+                    }
+
                     navigate('/friendresults');
                     break;
                 default:
