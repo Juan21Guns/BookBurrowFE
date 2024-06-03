@@ -6,6 +6,9 @@ function FriendResults () {
     const todos = useSelector((state: IRootState) => state.friend.friends);
 
     const [friends, setFriends] = React.useState(todos);
+    const [friendStatus, setFriendStatus] = React.useState(0);
+
+    // 0 pending, 1 accepted, 2 denied, 3 blocked
 
     useEffect(() => {
         setFriends(todos);
@@ -16,7 +19,11 @@ function FriendResults () {
             <h1>Search results:</h1>
             {friends.map((friend: any) => {
                 return (
-                    <p key={friend.userId}>{friend.firstName} {friend.lastName}</p>
+                    <div key={friend.userId} id={`friend-${friend.userId}`}>
+                        <p>{friend.firstName} {friend.lastName}</p>
+                        <p>{friendStatus}</p>
+                        <button>Add Friend</button>
+                    </div>
                 )
             })}
         </div>

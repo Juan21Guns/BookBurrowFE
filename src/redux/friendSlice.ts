@@ -4,9 +4,10 @@ interface friend {
     userId: number,
     firstName: string,
     lastName: string,
+    friendStatus: number | "no friend",
 }
 
-const initialState: any = {friends: []};
+const initialState: any = { friends: [] };
 
 const friendSlice = createSlice ({
     name: 'user',

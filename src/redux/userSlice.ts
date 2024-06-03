@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const cookieValue = document.cookie
     .split("; ");
@@ -23,12 +23,17 @@ const exp = cookieValue
     .find((row) => row.startsWith("exp="))
     ?.split("=")[1];
 
+const dbuid = cookieValue
+    .find((row) => row.startsWith("dbuid="))
+    ?.split("=")[1];
+
 const initialState = {
     userId: userId || "",
     username: username || "guest",
     confirmed: confirmed || "false",
     sub: sub || "",
     exp: exp || "",
+    dbuid: dbuid,
 };
 
 const userSlice = createSlice ({
@@ -41,6 +46,7 @@ const userSlice = createSlice ({
             state.confirmed = action.payload.confirmed;
             state.sub = action.payload.sub;
             state.exp = action.payload.exp;
+            state.dbuid = action.payload.dbuid;
         },
         removeUser: (state) => {
             state =  {
@@ -49,6 +55,7 @@ const userSlice = createSlice ({
                 confirmed: "false",
                 sub: "",
                 exp: "",
+                dbuid: "",
             };
         }
     },

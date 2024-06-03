@@ -4,16 +4,18 @@ import profile from '../assets/profile.svg';
 import search from '../assets/magnifier-svgrepo-com.svg';
 import React from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux"; 
 import { removeTodo, addTodo } from "../redux/objectSlice";
 import searchBooks from "./BookSearch/booksApi";
 import friendSearchApi from "./FriendSearch/friendSearchApi";
 import { addFriends, removeFriends } from "../redux/friendSlice";
+import { IRootState } from "../redux/IRootState";
 
 function Startup () {
     const [bSelect, setBSelect] = React.useState('Books'); 
     const [text, setText] = React.useState('');
 
+    const uid = useSelector((state: IRootState) => state.user.dbuid);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     
@@ -72,7 +74,7 @@ function Startup () {
                     }
 
                     try {
-                        friendSearchApi(params)
+                        friendSearchApi(params, uid)
                             .then(e => {
                                 if (e !== null) {
                                     dispatch(removeFriends());

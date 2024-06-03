@@ -12,6 +12,8 @@ import React from "react"
 import Authentication from "./pages/AWS/Authentication.tsx"
 import FriendResults from "./pages/FriendSearch/FriendResults.tsx"
 
+const axios = require('axios').default;
+
 function App() {
 
   const userInfo = useSelector((state: IRootState) => state.user);
