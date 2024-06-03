@@ -14,7 +14,9 @@ const friendSlice = createSlice ({
     initialState,
     reducers: {
         addFriends: (state, action) => {
+            console.log(action);
             action.payload.forEach((friend: friend) => {
+                console.log(friend);
                state.friends.push(friend); 
             });
         },

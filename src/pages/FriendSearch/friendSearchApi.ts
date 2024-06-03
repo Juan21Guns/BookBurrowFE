@@ -9,7 +9,7 @@ interface friend {
 
 async function friendSearchApi (param: string, uid: number) {
   //axios request that gets the results of the searched name. 
-  const data: friend[] = await axios.get(`${import.meta.env.VITE_SERVER}/byName?${param}`)
+  const data = await axios.get(`${import.meta.env.VITE_SERVER}/byName?${param}`)
     .then((response: any) => {
       return response.data;
     })
@@ -18,17 +18,20 @@ async function friendSearchApi (param: string, uid: number) {
       return [{
         userId: 0,
         firstName: "No",
-        lastName: "results :("
+        lastName: "results :(",
+        friendStatus: -1,
       }];
-    })
+    });
 
     if (data == null) {
       return null;
     }
 
-    //this promise hell maps the original axios request by adding the userid of the searched person.
-    const getFriendStatus = await Promise.all(data.map(async (friend: friend) => {
-      return await axios.get(`${import.meta.env.VITE_SERVER}/friendstatus?User1=${uid}&User2=${friend.userId}`)
+    const x: friend[] = [];
+
+    await data.forEach(async (friend: friend) => {
+      if (friend != null) {
+        return await axios.get(`${import.meta.env.VITE_SERVER}/friendstatus?User1=${uid}&User2=${friend.userId}`)
         .then((fs: any) => {
           const dupFriend = {
             userId: friend.userId,
@@ -37,14 +40,15 @@ async function friendSearchApi (param: string, uid: number) {
             friendStatus: fs.data.friendStatus,
           } satisfies friend;
 
-          return dupFriend;
+          x.push(dupFriend);
         })
         .catch((err: Error) => {
           console.log(err);
         })
-    }));
+      }
+    });
 
-    return getFriendStatus;
+    return x;
 }
 
 export default friendSearchApi;
