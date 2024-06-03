@@ -4,6 +4,8 @@ import userOptions from "./userOptions";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/userSlice";
 
+const axios = require('axios').default;
+
 function SignIn () {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -33,24 +35,46 @@ function SignIn () {
                 console.log("access token", session.tokens?.accessToken);
                 
                 try {
-                    dispatch(addUser({
-                        userId: sessionAccess?.username,
-                        username: sessionId?.name,
-                        confirmed: sessionId?.email_verified,
-                        sub: sessionAccess?.jti,
-                        exp: sessionAccess?.exp,
-                    } as userOptions));
+                    const data = await axios.get(`${import.meta.env.VITE_SERVER}/one`, {
+                        headers: {
+                            'sub': sessionAccess?.sub,
+                        }
+                    })
+                    .then((response: any) => {
+                        console.log(response);
+                        try {
+                            dispatch(addUser({
+                                userId: sessionAccess?.username,
+                                username: sessionId?.name,
+                                confirmed: sessionId?.email_verified,
+                                sub: sessionAccess?.jti,
+                                exp: sessionAccess?.exp,
+                                dbuid: response.data.userId,
+                        } as userOptions));
 
-                    document.cookie = `userid=${sessionAccess?.username}`;
-                    document.cookie = `username=${sessionId?.name}`;
-                    document.cookie = `uconfirmed=${sessionId?.email_verified}`;
-                    document.cookie = `sub=${sessionAccess?.jti}`;
-                    document.cookie = `exp=${sessionAccess?.exp}`;
+                        document.cookie = `userid=${sessionAccess?.username}`;
+                        document.cookie = `username=${sessionId?.name}`;
+                        document.cookie = `uconfirmed=${sessionId?.email_verified}`;
+                        document.cookie = `sub=${sessionAccess?.jti}`;
+                        document.cookie = `exp=${sessionAccess?.exp}`;
+                        document.cookie = `dbuid=${response.data.userId}`
 
-                    navigate("/home");
-                    window.location.reload();
+                        navigate("/home");
+                        window.location.reload();
+
+                        } catch (error) {
+                            return error;
+                        }
+                    })
+                    .catch((err: Error) => {
+                        return err;  
+                    })
+                
+                    if (data == null) {
+                        return null;
+                    }
                 } catch (error) {
-                    console.log(error);
+                    return error;
                 }
             }
         } catch (error) {
